@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\HomeLab\\DoAn\\BubblyChat\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|D:\\HomeLab\\DoAn\\BubblyChat\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|d:\\homelab\\doan\\bubblychat\\styles\\navigatebutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|solutionrelative:styles\\navigatebutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|D:\\HomeLab\\DoAn\\BubblyChat\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|D:\\HomeLab\\DoAn\\BubblyChat\\mvvm\\view\\chattings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{EAF71620-21ED-4D30-BECB-98DF0D09EE03}|BubblyChat.csproj|solutionrelative:mvvm\\view\\chattings.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 382,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavigateButton.xaml",
+              "DocumentMoniker": "D:\\HomeLab\\DoAn\\BubblyChat\\Styles\\NavigateButton.xaml",
+              "RelativeDocumentMoniker": "Styles\\NavigateButton.xaml",
+              "ToolTip": "D:\\HomeLab\\DoAn\\BubblyChat\\Styles\\NavigateButton.xaml",
+              "RelativeToolTip": "Styles\\NavigateButton.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-20T03:09:02.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\HomeLab\\DoAn\\BubblyChat\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\HomeLab\\DoAn\\BubblyChat\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-13T04:08:41.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\HomeLab\\DoAn\\BubblyChat\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\HomeLab\\DoAn\\BubblyChat\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-20T03:09:54.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Chattings.xaml",
+              "DocumentMoniker": "D:\\HomeLab\\DoAn\\BubblyChat\\MVVM\\View\\Chattings.xaml",
+              "RelativeDocumentMoniker": "MVVM\\View\\Chattings.xaml",
+              "ToolTip": "D:\\HomeLab\\DoAn\\BubblyChat\\MVVM\\View\\Chattings.xaml",
+              "RelativeToolTip": "MVVM\\View\\Chattings.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-13T04:18:09.046Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

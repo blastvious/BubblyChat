@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:BubblyChat.MVVM.ViewModel"
+                    xmlns:view="clr-namespace:BubblyChat.MVVM.View">
+
+    <DataTemplate DataType="{x:Type vm:ChattingVM}">
+        <view:Chattings/>
+    </DataTemplate>
+    
+    
+</ResourceDictionary>

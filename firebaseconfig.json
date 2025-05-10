@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bubblychatapp",
+  "private_key_id": "5cb1c2b3f329dffe2c69bd07c68e53ea74f99946",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDRj3SoiwrIPMte\nxxAYKCRuLmeq6pOu/LK8M8JmM72B3zzB1DlQ8r42V3U2wk4gmDMbx2oMRv76lxfn\n8UL3bLAUtr47bCfgtwJurlAmuyBUbtjZ3+pz/Cc0+lL9TZTS6/HQ08PcCVc1aGlm\nQ90bVuDn5d+WpqsqcJFd/SRaYyQRMifFVKQcORJGzuZOXyX/xbgGUNvVKA+92z1Y\nV9A8HbOxttfaO7ynTzIkEa3uzJ2BepkeeuSMqA1DgH9Yh8uj3FBoBImrij4Ez4Gk\nwDS+JkpDwnXKIp5BfrDr8GQWHfZ9/FZhQUmYgyI60ElRI6ha5MNnqf0KTC/BhDdU\nYqMvG8enAgMBAAECggEAZhr7wFNfAYl9ncRoNxz4AydhI4oAQzak78ZYZeu33luj\nAt4gvyxHObsLRY8O+hqubE6RgUHmYrrTzxNiiaPPd4hC0Dk2hOsmqD8OlpB+hCUu\nS5oqZjDp+YoufXUbmlmUDSfhOojikQc6s7VFOljuZI9AjerPY3JNofoBiHjdzfI7\na769mx6o/7KlDbF9E4DfOxFfGSxVgbzDneogRFWhucpcEMa0Ga9LyhrsZRWYPD17\neVLI5ZyN/LyWUdhPn+4DlFjM8WvxMVi2r78DAeR4jMpA2S5ed3mFs05v6LcKBgHA\nOOljZ5Zl57zyvxlDz25hErfBSM24O49N/yrMikliwQKBgQD+tS92eNV3G3HCmK+4\nrC31tyarMAKSzgFvYLv7ZCx3YPimd1lLvlq/cXUjYGVX4VvkGu2+N66U7JCwlb1d\nk6dOGigMzA5ZAhVlxKcJk1dvLZ/Qll3TZStswFm8HlBnW1Kyasj6CpjnGOxK9NDh\nlivnHoqEREr1OLS4SVWt6kaa2QKBgQDSn6ICPDEQ1zAT5bwrAGyrab6VgtaL/gnt\nkJ+56ysBgc53+aWRlZUhM4km66RBSBRBUlMe45Hkp8q+lD0gO2PErqwFwQtQfiRZ\nsvb+dPxffFiaVe11KOdxmqvkOxciMQfvXZ7KPT/G3kSgh2QJsGfJxgWPiZB3/7Db\n1ByLqObmfwKBgE1NS/RWw+J8L9BxapNPnjs+tLurvHw1jXXyE9s+EcjBY3WSL0Wv\npfcIRhbQgLFlMfBOw+zBFXkZOuh86ZXm5BXuFk2b+JbG7RuPzWo4j4asgB5cJGmu\nALnmvtU7FgfoTXbctdY9NR6eD8jH+EUewIBKYpu15lH6Pc7YYup/eaIxAoGAeHXI\nCJM4VLNd0eNwjP9/J0IhOA1Oe15deztdvs1bGU+OMFvdb7gnRIffBx16IcQBoaJd\n26q3xBibAghyNT8CPnjP9bKEsBKU46BRVxK9TDcnzY0bdAhi5jxZ1vxcrLdyHFpk\n+LGzCiARC+ajNk9n7KSOhZtdvuPD2NYlRVLiTC0CgYA9l/m0VpObz4LFbTyDm87y\nT6BUcS4GK7UVasmq5YLo+fbl4XGxk4xnW6ZdzUUgoSluv+fLfAGY2rpz/FFYVlBj\nUY9tLRxHFsi3ZaJ30wukNAqTXnlmOf6pBPAZ40DVbQUunu/PnLGYDnZ5N6X3dFJC\nbUhD+Pc46b2ix259o83rNg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@bubblychatapp.iam.gserviceaccount.com",
+  "client_id": "109665313337494741893",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40bubblychatapp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -181,8 +181,7 @@
                                Foreground="DarkGray"
                                VerticalAlignment="Center"
                                Padding="60 0 0 0"/>
-                    <StackPanel Orientation="Horizontal"
-                                >
+                    <StackPanel Orientation="Horizontal" >
 
                         <TextBox FontWeight="Light"
                                  Text="{Binding Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"

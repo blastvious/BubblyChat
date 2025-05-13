@@ -104,6 +104,26 @@ namespace BubblyChat.Service
             }
         }
 
+
+        public async Task<bool> SendPasswordResetEmailAsync(string email)
+        {
+            try
+            {
+                await _authClient.ResetEmailPasswordAsync(email);
+                _messageError = "Đã gửi email đặt lại mật khẩu đến " + email;
+                return true;
+            }
+            catch (FirebaseAuthException ex)
+            {
+                _messageError = GetFriendlyErrorMessage(ex);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                _messageError = "Lỗi không xác định: " + ex.Message;
+                return false;
+            }
+        }
       
 
       
@@ -117,7 +137,11 @@ namespace BubblyChat.Service
                 case AuthErrorReason.WeakPassword:
                     return "Mật khẩu phải có ít nhất 6 ký tự";
                 case AuthErrorReason.WrongPassword:
-                    return "Sai mật khẩu";
+                    return "Sai mật khẩu";  
+                case AuthErrorReason.InvalidEmailAddress:
+                    return "Email không hợp lệ";
+                case AuthErrorReason.UserNotFound:
+                    return "Người dùng không tồn tại";
                 default:
                     return $"Lỗi: {ex.Reason}";
             }

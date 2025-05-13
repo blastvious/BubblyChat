@@ -87,7 +87,7 @@ namespace BubblyChat.MVVM.ViewModel
         public LoginVM()
         {
             LoginCommand = new RelayCommand(ExecuteLoginCommandAsync, CanExecuteLoginCommand);
-            RecoverPasswordCommand = new RelayCommand(p=>ExecuteRecoverPasswordCommand("",""));
+            RecoverPasswordCommand = new RelayCommand(ExecuteRecoverPasswordCommand);
             SignUpCommand = new RelayCommand(ExecuteSignUpCommand);
 
         }
@@ -134,9 +134,21 @@ namespace BubblyChat.MVVM.ViewModel
             }
         }
 
-        private void ExecuteRecoverPasswordCommand(string usernmae, string email)
+        private async void ExecuteRecoverPasswordCommand(object obj)
         {
-            throw new NotImplementedException();
+            var success = await _authService.SendPasswordResetEmailAsync(Email);
+
+            if (success)
+            {
+                ColorStatusMessage = "Green";
+                StatusMessage = "Đã gửi email đặt lại mật khẩu đến " + Email;
+                return;
+            }
+            else
+            {
+                ColorStatusMessage = "#D75960";
+                StatusMessage = _authService._messageError;
+            }
         }
 
         public void RaiseCanExecuteChanged()

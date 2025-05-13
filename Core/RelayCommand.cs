@@ -12,6 +12,7 @@ namespace BubblyChat.Core
         private Action<object> execute;
 
         private Func<object, bool> canExecute;
+        private Action<string, string> executeRecoverPasswordCommand;
 
         public event EventHandler CanExecuteChanged
         {
@@ -23,6 +24,11 @@ namespace BubblyChat.Core
         {
             this.execute = execute;
             this.canExecute = canExecute;
+        }
+
+        public RelayCommand(Action<string, string> executeRecoverPasswordCommand)
+        {
+            this.executeRecoverPasswordCommand = executeRecoverPasswordCommand;
         }
 
         public bool CanExecute(object parameter)

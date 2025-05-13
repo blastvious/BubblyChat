@@ -300,6 +300,7 @@
                         </Button>
                         <Button x:Name="btnResetPassword"
                                 Content="Forgot Password ?"
+                                Command="{Binding RecoverPasswordCommand}"
                                 Cursor="Hand"
                                 FontWeight="Light"
                                 BorderBrush="Transparent">

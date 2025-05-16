@@ -15,6 +15,7 @@ namespace BubblyChat.Service
         private const string AuthDomain = "bubblychatapp.firebaseapp.com";
         private readonly FirebaseAuthClient _authClient;
         
+
         private UserCredential _userCredential;
         public string _messageError;
 

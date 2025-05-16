@@ -422,6 +422,7 @@
     <Compile Include="MVVM\View\UpdateProfileView.xaml.cs">
       <DependentUpon>UpdateProfileView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Service\CloudinaryHelpers.cs" />
     <Compile Include="Service\FirebaseAuthService.cs" />
     <Page Include="Core\DataTemplate.xaml">
       <SubType>Designer</SubType>

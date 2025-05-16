@@ -142,6 +142,7 @@
                                 Width="550"
                                 FontSize="28"
                                 Margin="50 0 0 0"
+                                SelectedDate="{Binding Birthdate}"
                                 Background="Transparent">
                         <DatePicker.BorderBrush>
                             <LinearGradientBrush EndPoint="0.5,0" StartPoint="0.5,1">
@@ -204,8 +205,6 @@
                     <Button.Template>
                         <ControlTemplate TargetType="Button">
                             <Border Width="55" Height="35"
-                                    BorderThickness="5"
-                                    BorderBrush="LightGray"
                                     CornerRadius="0 30 0 0"
                                     Background="{TemplateBinding Background}">
                                 <ContentPresenter VerticalAlignment="Center"

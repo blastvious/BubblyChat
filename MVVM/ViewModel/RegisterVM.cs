@@ -21,6 +21,7 @@ namespace BubblyChat.MVVM.ViewModel
         private SecureString _confirmPassword;
         private bool _isViewVisible = true;
         private string _messageError;
+        private string _colorStatusMessage = "#D75960";
         private readonly FirebaseAuthService _authService = new FirebaseAuthService();
         public string MessageError
         {
@@ -29,6 +30,15 @@ namespace BubblyChat.MVVM.ViewModel
             {
                 _messageError = value;
                 OnPropertyChanged(nameof(MessageError));
+            }
+        }
+        public string ColorStatusMessage
+        {
+            get { return _colorStatusMessage; }
+            set
+            {
+                _colorStatusMessage = value;
+                OnPropertyChanged(nameof(ColorStatusMessage));
             }
         }
         public string Email
@@ -97,7 +107,10 @@ namespace BubblyChat.MVVM.ViewModel
             var _user = await _authService.RegisterUserAsync(Email, _password);
             if (_user != null)
             {
-                _messageError = "Đăng ký thành công";
+
+                MessageError = "Đăng ký thành công";
+                ColorStatusMessage = "Green";
+                await Task.Delay(2000);
                 var loginView = new LoginView();
                 loginView.Show();
                 if (obj is Window registerWindow)

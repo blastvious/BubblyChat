@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BubblyChat.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,16 @@ namespace BubblyChat.MVVM.View
     /// <summary>
     /// Interaction logic for UpdateProfileView.xaml
     /// </summary>
+    /// 
+
+
     public partial class UpdateProfileView : Window
     {
         public UpdateProfileView()
         {
             InitializeComponent();
+            Loaded += UpdateProfileView_Loaded;
+
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -36,5 +42,14 @@ namespace BubblyChat.MVVM.View
                 this.DragMove();
             }
         }
+
+        private async void UpdateProfileView_Loaded(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is UpdateProfileVM viewModel)
+            {
+                await viewModel.InitAysnc();
+            }
+        }
+
     }
 }

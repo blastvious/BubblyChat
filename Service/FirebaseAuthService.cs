@@ -36,19 +36,26 @@ namespace BubblyChat.Service
 
         }
 
+        //Dang ky
         public async Task<Users> RegisterUserAsync(string email, string password)
         {
             try
             {
                 _userCredential = await _authClient.CreateUserWithEmailAndPasswordAsync(email, password);
                 var user = _userCredential.User;
-                return new Users
+                var newUser = new Users
                 {
                     Id = user.Uid,
                     Email = email,
-                    CreatedAt = DateTime.Now
+                    CreatedAt = DateTime.Now,
+                    DisplayName ="",
+                    FirstLogin = true,
+
 
                 };
+                var firebaseRTDB = new FirebaseRTDB();
+                await firebaseRTDB.SaveUserAsync(newUser);
+                return newUser;
             }
             catch (FirebaseAuthException ex)
             {
@@ -70,12 +77,27 @@ namespace BubblyChat.Service
             {
                 _userCredential = await _authClient.SignInWithEmailAndPasswordAsync(email, password);
                 var user = _userCredential.User;
-                return new Users
+
+                
+                var firebaseRTDB = new FirebaseRTDB();
+                var currentUser = await firebaseRTDB.GetUserAsync(user.Uid);
+                // to deal if user is existing in The RTDB
+                if (currentUser != null)
                 {
-                    Id = user.Uid,
-                    Email = user.Info.Email,
-                    CreatedAt = DateTime.Now
-                };
+                    CurrentUserService.CurrentUser = currentUser;
+                    return currentUser;
+                }
+                else
+                {
+                    //to deal if user not found in RTDB
+                    return new Users
+                    {
+                        Id = user.Uid,
+                        Email = email,
+                        CreatedAt = DateTime.Now
+                    };
+                    
+                }
             }
             catch (FirebaseAuthException ex)
             {
@@ -83,7 +105,6 @@ namespace BubblyChat.Service
                 Console.WriteLine("Lỗi đăng nhập: " + _messageError);
                 return null;
             }
-
             catch (Exception ex)
             {
                 Console.WriteLine("Lỗi không xác định: " + ex.Message);
@@ -91,6 +112,16 @@ namespace BubblyChat.Service
             }
         }
 
+
+        //Dang xuat
+        //To do: Log out account
+        public Task LogOutAsync()
+        {
+            Logout();
+            return Task.CompletedTask;
+        }
+
+        //Convert SecureString to string
         public static string SecureStringToString(SecureString secureString)
         {
             IntPtr valuePtr = IntPtr.Zero;
@@ -105,7 +136,7 @@ namespace BubblyChat.Service
             }
         }
 
-
+        //Doi mat khau
         public async Task<bool> SendPasswordResetEmailAsync(string email)
         {
             try
@@ -127,8 +158,33 @@ namespace BubblyChat.Service
         }
       
 
-      
+        //Lay token de duy tri phien dang nhap
+        public async Task<string> GetidToken()
+        {
+           var user = _authClient.User;
+            if (user != null)
+            {
+                var token = await user.GetIdTokenAsync();
+                return token;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
+        public void Logout()
+        {
+            try
+            {
+                _authClient.SignOut();
+                _userCredential = null;
+            }
+            catch (Exception ex)
+            {
+                _messageError = "Lỗi đăng xuất " + ex.Message;
+            }
+        }
         private string GetFriendlyErrorMessage(FirebaseAuthException ex)
         {
             switch (ex.Reason)

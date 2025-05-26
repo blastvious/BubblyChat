@@ -195,3 +195,10 @@ E:\DoAn\Chat\BubblyChat\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\DoAn\Chat\BubblyChat\obj\Debug\Styles\WindowPage.baml
 E:\DoAn\Chat\BubblyChat\obj\Debug\MVVM\View\UpdateProfileView.g.cs
 E:\DoAn\Chat\BubblyChat\obj\Debug\MVVM\View\UpdateProfileView.baml
+E:\DoAn\Chat\BubblyChat\bin\Debug\Firebase.Storage.dll
+E:\DoAn\Chat\BubblyChat\bin\Debug\Firebase.dll
+E:\DoAn\Chat\BubblyChat\bin\Debug\LiteDB.dll
+E:\DoAn\Chat\BubblyChat\bin\Debug\System.Reactive.dll
+E:\DoAn\Chat\BubblyChat\bin\Debug\Firebase.xml
+E:\DoAn\Chat\BubblyChat\bin\Debug\LiteDB.xml
+E:\DoAn\Chat\BubblyChat\bin\Debug\System.Reactive.xml

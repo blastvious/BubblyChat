@@ -12,10 +12,12 @@ namespace BubblyChat.MVVM.Model
         public string Email { get; set; }
         public string DisplayName { get; set; }
 
-        public bool FirstLogin { get; set; }
+        public bool FirstLogin { get; set; } = false;
 
         public string Avatar { get; set; }
+        public string PhoneNumber { get; set; }
         public DateTime CreatedAt { get; set; }
+        public DateTime Birthdate { get; set; }
 
     }
 }

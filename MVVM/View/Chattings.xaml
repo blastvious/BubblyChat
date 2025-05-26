@@ -35,12 +35,12 @@
                    FontWeight="Medium"
                    Foreground="Gray"
                    Margin="10 0 0 0"/>
-            <ListView x:Name="Contact" ItemsSource="{Binding Contacts}" 
-                    SelectedItem="{Binding SelectedContact}"
-                  Background="Transparent"
-                  BorderThickness="0" 
-                  Grid.Row="1"
-                  ItemContainerStyle="{StaticResource ContactCard}"  />
+            <ListView x:Name="Contact" ItemsSource="{Binding _Contacts}" 
+                      SelectedItem="{Binding SelectedContact}"
+                      Background="Transparent"
+                      BorderThickness="0" 
+                      Grid.Row="1"
+                      ItemContainerStyle="{StaticResource ContactCard}"  />
 
             
             <!--User Account-->
@@ -50,10 +50,13 @@
                 <Border CornerRadius="30"
                         Width="40"
                         Height="40"
-                        Background="#3bff6f"
-                        Margin="20 0 0 0"/>
+                        Margin="20 0 0 0">
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding CurrentUser.Avatar}"/>
+                    </Border.Background>
+                </Border>
                 <StackPanel VerticalAlignment="Center">
-                    <Label Content="{Binding OwnUser}"
+                    <Label Content="{Binding CurrentUser.DisplayName}"
                            Foreground="Gray"
                            FontWeight="Medium"
                            FontSize="12"

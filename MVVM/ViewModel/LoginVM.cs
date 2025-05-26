@@ -110,6 +110,8 @@ namespace BubblyChat.MVVM.ViewModel
             {
                 ColorStatusMessage = "Green";
                 StatusMessage = "Đăng nhập thành công!";
+                CurrentUserService.CurrentUser = user;
+
                 await Task.Delay(2000);
                 var UpateProfileView = new UpdateProfileView();
                 UpateProfileView.Show();
@@ -119,7 +121,7 @@ namespace BubblyChat.MVVM.ViewModel
             else
             {
                 ColorStatusMessage = "#D75960";
-                StatusMessage = _authService._messageError;
+                StatusMessage = "Sai mật khẩu";
             }
         }
 
@@ -147,7 +149,7 @@ namespace BubblyChat.MVVM.ViewModel
             else
             {
                 ColorStatusMessage = "#D75960";
-                StatusMessage = _authService._messageError;
+                StatusMessage = "Email không hợp lệ";
             }
         }
 

@@ -1,4 +1,4 @@
-﻿ using BubblyChat.Core;
+﻿using BubblyChat.Core;
 using BubblyChat.MVVM.Model;
 using System;
 using System.Collections.Generic;
@@ -6,14 +6,17 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BubblyChat.Service;
 
 namespace BubblyChat.MVVM.ViewModel
 {
     public class ChattingVM : ViewModelBase
     {
-        public ObservableCollection<MessageModel> Messages { get; set; }
-        public ObservableCollection<ContactModel> Contacts { get; set; }
-        public Users OwnUser { get; set; }
+
+        public ObservableCollection<MessageModel> _Messages { get; set; }
+        public ObservableCollection<ContactModel> _Contacts { get; set; }
+        private Users _currentUser;
+        private FirebaseStorageService _storageService;
 
         /* Commands */
         public RelayCommand SendCommand { get; set; }
@@ -31,7 +34,15 @@ namespace BubblyChat.MVVM.ViewModel
                 //
             }
         }
-
+        public Users CurrentUser
+        {
+            get { return _currentUser; }
+            set
+            {
+                _currentUser = value;
+                OnPropertyChanged();
+            }
+        }
         private string _message;
 
         public string Message
@@ -47,10 +58,12 @@ namespace BubblyChat.MVVM.ViewModel
 
         public ChattingVM()
         {
+            CurrentUser = CurrentUserService.CurrentUser;
+            _storageService = new FirebaseStorageService();
 
             SendCommand = new RelayCommand(o =>
             {
-                Messages.Add(new MessageModel
+                _Messages.Add(new MessageModel
                 {
                     Message = Message,
                     FirstMessage = false,
@@ -60,10 +73,10 @@ namespace BubblyChat.MVVM.ViewModel
                 Message = "";
 
             });
-            Messages = new ObservableCollection<MessageModel>();
-            Contacts = new ObservableCollection<ContactModel>();
+            _Messages = new ObservableCollection<MessageModel>();
+            _Contacts = new ObservableCollection<ContactModel>();
 
-            Messages.Add(new MessageModel
+            _Messages.Add(new MessageModel
             {
                 Username = "Tuan",
                 UsernameColor = "#409aff",
@@ -76,7 +89,7 @@ namespace BubblyChat.MVVM.ViewModel
 
             for (int i = 0; i < 3; i++)
             {
-                Messages.Add(new MessageModel
+                _Messages.Add(new MessageModel
                 {
                     Username = "Nghia",
                     UsernameColor = "#409aff",
@@ -90,7 +103,7 @@ namespace BubblyChat.MVVM.ViewModel
 
             for (int i = 0; i < 4; i++)
             {
-                Messages.Add(new MessageModel
+                _Messages.Add(new MessageModel
                 {
                     Username = "An",
                     UsernameColor = "#409aff",
@@ -100,7 +113,7 @@ namespace BubblyChat.MVVM.ViewModel
                     IsNativeOrigin = true,
                 });
             }
-            Messages.Add(new MessageModel
+            _Messages.Add(new MessageModel
             {
                 Username = "An",
                 UsernameColor = "#409aff",
@@ -110,16 +123,29 @@ namespace BubblyChat.MVVM.ViewModel
                 IsNativeOrigin = true,
             });
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++)         
             {
-                Contacts.Add(new ContactModel
+                _Contacts.Add(new ContactModel
                 {
                     Username = $"Tuan{i}",
                     ImageSource = "/Images/1.jpg",
-                    Messages = Messages
+                    Messages = _Messages
                 });
             }
 
         }
+        //To DO : Init info currebt user and load messages from Firebase
+        public async Task InitAysnc()
+        {
+            CurrentUser = CurrentUserService.CurrentUser;
+            if(_currentUser == null)
+            {
+                return;
+            }
+            
+
+
+        }
+
     }
 }
